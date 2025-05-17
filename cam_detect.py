@@ -1,9 +1,6 @@
 import cv2
 import numpy as np
 from tensorflow.keras.models import load_model
-import pytesseract
-
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 
 def scaling(x, scale):
@@ -88,18 +85,3 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
-
-
-#  digit_img = preprocess_digit(roi)
-#             prediction = model.predict(digit_img)
-#             digit = np.argmax(prediction)
-#             cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
-#             cv2.putText(
-#                 frame,
-#                 str(digit),
-#                 (x, y - 10),
-#                 cv2.FONT_HERSHEY_SIMPLEX,
-#                 2,
-#                 (0, 0, 255),
-#                 2,
-#             )
